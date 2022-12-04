@@ -1,0 +1,77 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+body {
+  margin: 0;
+  padding: 0;
+  footer {
+    background-color: $bg-color;
+    .container {
+      @extend %container;
+      @include flexBox(row, space-around, center);
+      flex-wrap: wrap;
+      .logo-icons {
+        margin-left: 0px;
+        .logo {
+          padding-bottom: 63px;
+          @media only screen and (max-width: 992px) {
+            display: flex;
+            justify-content: center;
+          }
+        }
+        .icons {
+          @include flexBox(row, flex-start);
+          gap: 10px;
+          .icon {
+            @include flexBox;
+            width: 40px;
+            height: 40px;
+            border: 1px solid white;
+            border-radius: 50%;
+          }
+        }
+      }
+      .footer-text {
+        @include flexBox;
+        column-gap: 79px;
+        div {
+          @include flexBox(column);
+          flex-wrap: wrap;
+          color: white;
+          h5 {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 0;
+          }
+          ul {
+            @include flexBox(column);
+            padding: 0;
+            margin: 0;
+            il {
+              padding-top: 16px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .copyright {
+      @include flexBox;
+      border-top: 1px solid #dcf2ed14;
+      p {
+        font-size: 14px;
+        color: #dcf2ed;
+        margin: 35px 0;
+      }
+    }
+    @media only screen and (max-width: 992px) {
+      display: block;
+      .container {
+        @include flexBox(column);
+        .footer-text {
+          @include flexBox(column);
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

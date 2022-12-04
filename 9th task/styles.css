@@ -1,0 +1,32 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #28293E;
+    color: white;
+}
+
+.navbar-items {
+    display: flex;
+    list-style-type: none;
+    gap:20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.i {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    button {
+        display: none;
+    }
+
+    .i {
+        display: block;
+    }
+}

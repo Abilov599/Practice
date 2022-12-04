@@ -1,0 +1,154 @@
+body .container .main .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 2s;
+}
+body .container .main .card:hover {
+  transform: scale(1.1);
+  background-color: #1F409C;
+}
+
+body .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F2D57;
+  color: #ffffff;
+}
+
+body .container .main .card .ico {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+body .container .main .card .ico i {
+  font-size: 30px;
+}
+
+body .container .main .card button {
+  width: 100px;
+  height: 30px;
+}
+
+body .container .main .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 2s;
+}
+body .container .main .card:hover {
+  transform: scale(1.1);
+  background-color: #1F409C;
+}
+
+body .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F2D57;
+  color: #ffffff;
+}
+
+body .container .main .card .ico {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+body .container .main .card .ico i {
+  font-size: 30px;
+}
+
+body .container .main .card button {
+  width: 100px;
+  height: 30px;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: #1F2D57;
+}
+body .container {
+  width: 100%;
+  padding-top: 100px;
+}
+@media only screen and (max-width: 992px) {
+  body .container {
+    padding: 50px;
+  }
+}
+body .container .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+@media only screen and (max-width: 768px) {
+  body .container .main {
+    padding-top: 15px;
+  }
+}
+body .container .main .leftSide,
+body .container .main .rightSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media only screen and (max-width: 768px) {
+  body .container .main .leftSide,
+body .container .main .rightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+body .container .main .card button {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 992px) {
+  body .container .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,39 @@
+@import "./variables";
+
+@mixin flexBox(
+  $justify-content: center,
+  $align-items: center,
+  $flex-direction: row
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+
+@mixin barItem() {
+  .barItem {
+    transition: all 0.5s;
+    h4 {
+      margin-bottom: 0;
+    }
+    p {
+      padding: 0px 40px 20px;
+      text-align: center;
+    }
+    @include flexBox(center, center, column);
+    width: 50%;
+    .icon {
+      padding-top: 30px;
+      i {
+        color: $primary-color;
+        font-size: 30px;
+      }
+    }
+    &:hover {
+      background-color: white;
+      border-bottom: 1px solid $primary-color;
+      transform: scale(1.01);
+    }
+  }
+}

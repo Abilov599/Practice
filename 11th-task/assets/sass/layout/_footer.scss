@@ -1,0 +1,7 @@
+@import "../components/extends";
+
+body {
+  .submit-btn {
+    @extend %green-btn;
+  }
+}

@@ -1,0 +1,36 @@
+.container {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    column-gap: 10px;
+}
+
+.leftBox{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    column-gap: 10px;
+}
+
+.home {
+    width: 50%;
+    background-color: brown;
+}
+
+.about {
+    width: 50%;
+    background-color: black;
+}
+
+.leftBoxBottom{
+    width: 50vw;
+    height: 50vh;
+    column-gap: 10px;
+    background-color: aqua;
+}
+
+.rightBox{
+    width: 50%;
+    height: 50vh;
+    background-color: purple;
+}

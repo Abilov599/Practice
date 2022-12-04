@@ -1,0 +1,47 @@
+.card {
+    border: 1px solid palevioletred;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    border-radius: 2%;
+    margin: 50px auto;
+    background-color:wheat
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color: aqua;
+    margin: 30px auto;
+    border-radius: 50%;
+}
+
+.fst-btn {
+    background-color: purple;
+    border-radius: 8px;
+    border: 0;
+}
+
+.card2 {
+    border: 1px solid ;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    border-radius: 2%;
+    margin: 50px auto;
+    background-color: aqua
+}
+
+.circle2 {
+    width: 40px;
+    height: 40px;
+    background-color: palevioletred;
+    margin: 30px auto;
+    border-radius: 50%;
+}
+
+.snd-btn {
+    background-color: green;
+    border-radius: 8px;
+    border: 0;
+}

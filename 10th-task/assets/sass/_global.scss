@@ -1,0 +1,60 @@
+@import "./variables";
+@import "./components";
+@import "./mixins";
+
+body {
+  @include flexBox();
+  padding: 0;
+  margin: 0;
+  background-color: $bg-color;
+
+  .container {
+    @extend %bg-color;
+    width: 100%;
+    padding-top: 100px;
+
+    @media only screen and (max-width: 992px) {
+      padding: 50px;
+    }
+
+    .header {
+      @include flexBox($flex-direction: column);
+    }
+    .main {
+      @include flexBox();
+      width: 100%;
+      gap: 20px;
+
+      @media only screen and (max-width: 768px) {
+        padding-top: 15px;
+      }
+
+      .leftSide,
+      .rightSide {
+        @include flexBox();
+        gap: 20px;
+
+        @media only screen and (max-width: 768px) {
+          @include flexBox($flex-direction: column);
+        }
+      }
+
+      .card {
+        @extend %card-style;
+        .ico {
+          @extend %icon;
+        }
+
+        button {
+          @extend %button;
+          margin-bottom: 20px;
+        }
+      }
+
+      @media only screen and (max-width: 992px) {
+        @include flexBox($flex-direction: column);
+        height: 100%;
+      }
+    }
+  }
+}

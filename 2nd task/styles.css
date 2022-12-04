@@ -1,0 +1,36 @@
+
+.fst {
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    border: 10px solid black;
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.snd {
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border: 10px solid green ;
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.trd {
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    border: 10px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-top: auto;
+}

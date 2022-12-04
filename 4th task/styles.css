@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    margin-top: 2%;
+    background-color: black;
+    height: 5vh;
+    width: 100vw;
+}
+
+section {
+    width: 100vw;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.row1 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 280px;
+    height: 200px;
+    background-color: grey;
+    margin: 20px;
+    border-radius: 12px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    height: 5vh;
+    width: 70vw;
+    background-color: blueviolet;
+    border-radius: 10px;
+}

@@ -1,0 +1,54 @@
+body {
+  padding: 0;
+  margin: 0;
+  .container {
+    width: 100vw;
+    .bar {
+      @include flexBox;
+      width: 100%;
+      background-color: $bg-color;
+      .leftSide,
+      .rightSide {
+        @include flexBox;
+        width: 50%;
+        @include barItem;
+      }
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    .chaynik {
+      height: 300px;
+      width: 400px;
+
+      border: 5px solid $primary-color;
+      .child {
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/a.jpeg");
+        background-size: cover;
+        background-position-x: 50%;
+        background-position-y: 50%;
+
+        &:hover .child {
+          background-size: 130%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    body {
+      .container {
+        .bar {
+          @include flexBox(center, center, column);
+          .leftSide,
+          .rightSide {
+            @include flexBox(center, center, column);
+          }
+        }
+      }
+    }
+  }
+}

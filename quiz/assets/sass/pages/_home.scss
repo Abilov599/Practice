@@ -1,0 +1,29 @@
+body {
+  .main {
+    padding: 79px 136px;
+    .cards {
+        @include flexBox;
+            flex-wrap: wrap;
+            gap: 57px;
+      .card {
+        .icons {
+          @include flexBox(row, flex-start);
+          column-gap: 10px;
+          .icon {
+            @include flexBox;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(128, 128, 128, 0.2);
+          }
+        }
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    @media only screen and (max-width:992px) {
+        display: block;
+    }
+  }
+}
