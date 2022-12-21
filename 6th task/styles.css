@@ -8,7 +8,7 @@ body {
 
 .card {
     height: 75vh;
-    width: 25vw;
+    width: 35vw;
 }
 
 .top {
@@ -73,4 +73,8 @@ body {
     background-color: red;
     border-radius: 50%;
     margin-bottom: 30px;
+}
+
+.selected {
+    background-color: green;
 }

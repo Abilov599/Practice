@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="welcomeBox">
+      <button class="SingUp">Sing Up</button>
+      <button class="SignIn">Sign In</button>
+    </div>
+    <div class="singUpBox">
+      <form
+        class="singUp"
+        style="display: flex; flex-direction: column; width: 200px"
+        action=""
+      >
+        <label for="username">Username: </label>
+        <input type="text" id="username" />
+        <label for="password">Password: </label>
+        <input type="password" id="password" />
+        <label for="email">Email: </label>
+        <input type="email" id="email" />
+        <label for="city">City</label>
+        <input type="text" id="city" />
+        <br />
+        <button style="width: 35%" type="submit" id="singUp">Sing Up</button>
+      </form>
+    </div>
+    <div class="signInBox">
+      <form
+        class="signIn"
+        style="display: flex; flex-direction: column; width: 200px"
+        action=""
+      >
+        <label for="signInUserName">Username: </label>
+        <input type="text" id="signInUserName" />
+        <label for="signInPassword">Password: </label>
+        <input type="password" id="signInPassword" />
+        <br />
+        <button style="width: 35%" type="submit">Sign In</button>
+      </form>
+    </div>
+  </body>
+</html>
