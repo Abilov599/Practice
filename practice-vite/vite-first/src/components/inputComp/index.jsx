@@ -13,13 +13,16 @@ const Table = () => {
 
   const [formStatus, setFormStatus] = useState(false);
 
-  // const [nameStatus, setNameStatus] = useState("");
-  // const [emailStatus, setEmailStatus] = useState("");
+  const [idStatus, setIdStatus] = useState("");
+  const [nameStatus, setNameStatus] = useState("");
+  const [emailStatus, setEmailStatus] = useState("");
 
   const [editBtnId, setEditBtnId] = useState("");
 
   const [inputNameValue, setInputNameValue] = useState("");
   const [inputEmailValue, setInputEmailValue] = useState("");
+
+  let data = JSON.parse(localStorage.getItem("data")) || [];
 
   const handleEdit = (e) => {
     setFormStatus(true);
@@ -77,7 +80,28 @@ const Table = () => {
                   </button>
                 </td>
                 <td>
-                  <button>Add</button>
+                  <button
+                    onClick={(e) => {
+                      setNameStatus(
+                        e.target.parentNode.parentNode.children[1].innerText
+                      );
+                      setEmailStatus(
+                        e.target.parentNode.parentNode.children[2].innerText
+                      );
+                      setIdStatus(
+                        e.target.parentNode.parentNode.children[0].innerText
+                      );
+                      let obj = {
+                        Id: idStatus,
+                        Name: nameStatus,
+                        Email: emailStatus,
+                      };
+                      data.push(obj);
+                      localStorage.setItem("data", JSON.stringify(data));
+                    }}
+                  >
+                    Add
+                  </button>
                 </td>
               </tr>
             );
