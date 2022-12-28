@@ -1,28 +1,3 @@
 {
-  "blogs": [
-    {
-      "title": "Omnis quaerat quae d",
-      "body": "Dolorum reprehenderi Dolorum reprehenderi Dolorum reprehenderi Dolorum reprehenderi\n",
-      "author": "avaz",
-      "id": 1
-    },
-    {
-      "title": "Quam id voluptate id",
-      "body": "Numquam proident re",
-      "author": "kanan",
-      "id": 3
-    },
-    {
-      "title": "Quam id voluptate id",
-      "body": "Numquam proident re",
-      "author": "kanan",
-      "id": 4
-    },
-    {
-      "blogTitle": "Minus totam irure ut",
-      "blogBody": "Repudiandae placeatewtvhje5bj7b357bbj57jk57g457ikg7h7",
-      "blogAuthor": "Jeyhun",
-      "id": 5
-    }
-  ]
+  "blogs": []
 }

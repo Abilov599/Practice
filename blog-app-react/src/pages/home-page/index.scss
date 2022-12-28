@@ -1,0 +1,32 @@
+#blogs-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  #blog-box {
+    box-shadow: 0px 0px 10px 0px #fff;
+    border-radius: 8px;
+    ul {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        color: teal;
+        margin: 0;
+      }
+      p {
+        color: white;
+        margin: 0;
+      }
+    }
+  }
+  & :hover {
+    ul {
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.93);
+      p {
+        color: black !important;
+      }
+    }
+  }
+}

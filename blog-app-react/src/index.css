@@ -25,7 +25,10 @@ a:hover {
 }
 
 ul {
-  display: flex;
-  gap: 2rem;
   list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }

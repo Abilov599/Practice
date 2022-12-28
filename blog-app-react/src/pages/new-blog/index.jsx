@@ -26,8 +26,8 @@ const NewBlog = () => {
 
   return (
     <div id="create-blog">
-      <h1>Add a New Blog</h1>
       <div id="blog-form">
+        <h1>Add a New Blog</h1>
         <form action="" id="form" onSubmit={handleSubmit}>
           <label htmlFor="blog-title">Blog title:</label>
           <input
