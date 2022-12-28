@@ -1,0 +1,39 @@
+#create-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  gap: 50px;
+  #blog-form {
+    max-width: 400px;
+    width: 100%;
+    #form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      #blog-title {
+        padding: 5px;
+      }
+      #blog-body {
+        height: 40px;
+      }
+      #blog-author {
+        padding: 5px;
+      }
+      #btn-box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+        #submit {
+          padding: 10px 15px;
+          background-color: #f1356d;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
