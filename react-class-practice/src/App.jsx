@@ -1,83 +1,78 @@
 import React, { useEffect, useState } from "react";
-import { Avatar, Divider, List, Skeleton } from "antd";
-import InfiniteScroll from "react-infinite-scroll-component";
-import "./App.css";
-const App = () => {
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-  const loadMoreData = () => {
-    if (loading) {
-      return;
-    }
-    setLoading(true);
-    fetch(
-      "https://randomuser.me/api/?results=10&inc=name,gender,email,nat,picture&noinfo"
-    )
-      .then((res) => res.json())
-      .then((body) => {
-        setData([...data, ...body.results]);
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false);
-      });
-  };
-  useEffect(() => {
-    loadMoreData();
-  }, []);
+import { Table } from "antd";
+import axios from "axios";
 
-  const handleSearch = (e) => {
-    setData(...[data.map((item) => e.target.value.inclues(item.email))]);
-  };
-  console.log(data);
+import "./App.css";
+import { getUsers } from "./service/github-users.service";
+const App = () => {
+  const [arr, setUsers] = useState([]);
+  const [countryName, setCountryName] = useState([]);
+
+  // const getMyusers = async () => {
+  //   setUsers(await getUsers(countryName));
+  // };
+
+  useEffect(() => {
+    axios(`http://universities.hipolabs.com/search?name=${countryName}`).then(
+      (data) => {
+        // console.log(data.data);
+
+        setUsers(data.data);
+      }
+    );
+  }, [countryName]);
+
+  // const handleChange = (e) => {
+  //   setCountryName(e.target.value);
+  //   console.log(users);
+  // };
+
+  const columns = [
+    {
+      title: "Country",
+      dataIndex: "country",
+      key: "country",
+      // render: (country) => country,
+    },
+    {
+      title: "University",
+      dataIndex: "name",
+      sorter: (a, b) => (a.name > b.name ? 1 : -1),
+    },
+    {
+      title: "Domains",
+      dataIndex: "domains",
+      render: (element) => element[0],
+      sorter: {
+        compare: (a, b) => a.math - b.math,
+        multiple: 2,
+      },
+    },
+    {
+      title: "Web Pages",
+      dataIndex: "web_pages",
+      key: "",
+      render: (element) => element[0],
+      sorter: (a, b) => (a.name > b.name ? 1 : -1),
+    },
+  ];
+
+  // const onChange = (pagination, filters, sorter, extra) => {
+  //   console.log("params", pagination, filters, sorter, extra);
+  // };
+
   return (
-    <div style={{ width: "100%", maxWidth: "300px" }}>
-      <div id="search" style={{ padding: "16px" }}>
-        <h1>Live Use Filter</h1>
-        <p>Search by name and/or location</p>
-        <input type="text" onChange={(e) => handleSearch(e)} />
-      </div>
-      <div
-        id="scrollableDiv"
-        style={{
-          height: 400,
-          overflow: "auto",
-          padding: "0 16px",
-          border: "1px solid rgba(140, 140, 140, 0.35)",
+    <main>
+      <input
+        type="text"
+        onChange={(e) => {
+          console.log(e.target.value);
+          setCountryName(e.target.value);
         }}
-      >
-        <InfiniteScroll
-          dataLength={data.length}
-          next={loadMoreData}
-          hasMore={data.length < 50}
-          loader={
-            <Skeleton
-              avatar
-              paragraph={{
-                rows: 1,
-              }}
-              active
-            />
-          }
-          endMessage={<Divider plain>It is all, nothing more 🤐</Divider>}
-          scrollableTarget="scrollableDiv"
-        >
-          <List
-            dataSource={data}
-            renderItem={(item) => (
-              <List.Item key={item.email}>
-                <List.Item.Meta
-                  avatar={<Avatar src={item.picture.large} />}
-                  title={<a href="https://ant.design">{item.name.last}</a>}
-                  description={item.email}
-                />
-                <div>Content</div>
-              </List.Item>
-            )}
-          />
-        </InfiniteScroll>
-      </div>
-    </div>
+      />
+      {/* <button onClick={handleClick}>Click me</button> */}
+      <Table columns={columns} dataSource={arr}  />
+    </main>
   );
 };
 
