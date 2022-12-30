@@ -1,0 +1,154 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Heidi",
+        "last": "Williams"
+      },
+      "email": "heidi.williams@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/90.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/90.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/90.jpg"
+      },
+      "nat": "US"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Lilje",
+        "last": "Sæbø"
+      },
+      "email": "lilje.saebo@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/1.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/1.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/1.jpg"
+      },
+      "nat": "NO"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Madison",
+        "last": "Ross"
+      },
+      "email": "madison.ross@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/73.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/73.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/73.jpg"
+      },
+      "nat": "CA"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Catherine",
+        "last": "Moore"
+      },
+      "email": "catherine.moore@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/47.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/47.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/47.jpg"
+      },
+      "nat": "US"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Mirolyuba",
+        "last": "Batenko"
+      },
+      "email": "mirolyuba.batenko@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/95.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/95.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/95.jpg"
+      },
+      "nat": "UA"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Tina",
+        "last": "Šarić"
+      },
+      "email": "tina.saric@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/93.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/93.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/93.jpg"
+      },
+      "nat": "RS"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Liesel",
+        "last": "Kimmel"
+      },
+      "email": "liesel.kimmel@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/59.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/59.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/59.jpg"
+      },
+      "nat": "DE"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Ariana",
+        "last": "Harris"
+      },
+      "email": "ariana.harris@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/4.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/4.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/4.jpg"
+      },
+      "nat": "NZ"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Evdokija",
+        "last": "Lapčević"
+      },
+      "email": "evdokija.lapcevic@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/47.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/47.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/47.jpg"
+      },
+      "nat": "RS"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Marshall",
+        "last": "Brown"
+      },
+      "email": "marshall.brown@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/91.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/91.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/91.jpg"
+      },
+      "nat": "GB"
+    }
+  ]
+}
