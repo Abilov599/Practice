@@ -43,16 +43,19 @@ const App = () => {
       title: "Domains",
       dataIndex: "domains",
       render: (element) => element[0],
-      sorter: {
-        compare: (a, b) => a.math - b.math,
-        multiple: 2,
-      },
+      sorter: (a, b) => (a.name > b.name ? 1 : -1),
     },
     {
       title: "Web Pages",
       dataIndex: "web_pages",
       key: "",
-      render: (element) => element[0],
+      render: (element) => {
+        return (
+          <a target="_blank" href={element[0]}>
+            {element[0]}
+          </a>
+        );
+      },
       sorter: (a, b) => (a.name > b.name ? 1 : -1),
     },
   ];
@@ -71,7 +74,7 @@ const App = () => {
         }}
       />
       {/* <button onClick={handleClick}>Click me</button> */}
-      <Table columns={columns} dataSource={arr}  />
+      <Table columns={columns} dataSource={arr} />
     </main>
   );
 };
