@@ -178,8 +178,8 @@ const CustomerList = () => {
       title: "DELETE",
       render: (element) => (
         <Popconfirm
-          title="Delete the task"
-          description="Are you sure to delete this task?"
+          title="Delete the Customer"
+          description="Are you sure to delete this customer?"
           onConfirm={() => confirm(element)}
           onCancel={cancel}
           okText="Yes"

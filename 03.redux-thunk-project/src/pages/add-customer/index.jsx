@@ -5,8 +5,8 @@ import { addCustomerAction } from "../../redux/action/customers.actions";
 
 const AddCustomer = () => {
   const dispatch = useDispatch();
+  const [form] = Form.useForm();
   const onFinish = (values) => {
-    console.log(values);
     let obj = {
       companyName: values.companyName,
       contactTitle: values.contactTitle,
@@ -16,10 +16,12 @@ const AddCustomer = () => {
       },
     };
     dispatch(addCustomerAction(obj));
+    form.resetFields();
   };
   return (
     <div style={{ maxWidth: "500px" }}>
       <Form
+        form={form}
         onFinish={onFinish}
         name="complex-form"
         labelCol={{

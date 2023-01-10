@@ -1,12 +1,28 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Table, Button } from "antd";
+import { Table, Button, message, Popconfirm } from "antd";
 import {
   removeAllFavoritesAction,
   removeFromFavoritesAction,
 } from "../../redux/action/favorites.actions";
 
 const FavoriteCustomers = () => {
+  const confirm = (obj) => {
+    handleRemove(obj.id);
+    message.success("Click on Yes");
+  };
+  const cancel = () => {
+    message.error("Click on No");
+  };
+
+  const confirm2 = () => {
+    dispatch(removeAllFavoritesAction());
+    message.success("Click on Yes");
+  };
+  const cancel2 = () => {
+    message.error("Click on No");
+  };
+
   const favorites = useSelector((state) => state.favoritesReducer);
   const dispatch = useDispatch();
 
@@ -34,21 +50,36 @@ const FavoriteCustomers = () => {
     {
       title: "Add To Favorites",
       render: (obj) => (
-        <Button danger onClick={() => handleRemove(obj.id)}>
-          Remove
-        </Button>
+        <Popconfirm
+          placement="bottom"
+          title="Delete the task"
+          description="Are you sure to delete this task?"
+          onConfirm={() => confirm(obj)}
+          onCancel={cancel}
+          okText="Yes"
+          cancelText="No"
+        >
+          <Button danger>Remove</Button>
+        </Popconfirm>
       ),
     },
   ];
   return (
     <>
-      <Button
-        danger
-        type="primary"
-        onClick={() => dispatch(removeAllFavoritesAction())}
+      <Popconfirm
+        placement="bottom"
+        title="Delete the task"
+        description="Are you sure to delete this task?"
+        onConfirm={confirm2}
+        onCancel={cancel2}
+        okText="Yes"
+        cancelText="No"
       >
-        Remove All
-      </Button>
+        <Button danger type="primary">
+          Remove All
+        </Button>
+      </Popconfirm>
+
       <Table columns={columns} dataSource={favorites} rowKey={"id"} />
     </>
   );
