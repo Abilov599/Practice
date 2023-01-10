@@ -1,21 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Form, Input, Space } from "antd";
 import { useDispatch } from "react-redux";
 import { addCustomerAction } from "../../redux/action/customers.actions";
 
 const AddCustomer = () => {
   const dispatch = useDispatch();
-  const [companyNameValue, setCompanyNameValue] = useState(null);
-  const [contactTitleValue, setContactTitleValue] = useState(null);
-  const [cityValue, setCityValue] = useState(null);
-  const [countryValue, setCountryValue] = useState(null);
-  const onFinish = () => {
+  const onFinish = (values) => {
+    console.log(values);
     let obj = {
-      companyName: companyNameValue,
-      contactTitle: contactTitleValue,
+      companyName: values.companyName,
+      contactTitle: values.contactTitle,
       address: {
-        city: cityValue,
-        country: countryValue,
+        city: values.city,
+        country: values.country,
       },
     };
     dispatch(addCustomerAction(obj));
@@ -31,6 +28,9 @@ const AddCustomer = () => {
         wrapperCol={{
           span: 16,
         }}
+        initialValues={{
+          remember: true,
+        }}
       >
         <Form.Item label="Company Name">
           <Space>
@@ -45,9 +45,6 @@ const AddCustomer = () => {
               ]}
             >
               <Input
-                onChange={(e) => {
-                  setCompanyNameValue(e.target.value);
-                }}
                 style={{
                   width: 160,
                 }}
@@ -69,9 +66,6 @@ const AddCustomer = () => {
               ]}
             >
               <Input
-                onChange={(e) => {
-                  setContactTitleValue(e.target.value);
-                }}
                 style={{
                   width: 160,
                 }}
@@ -93,9 +87,6 @@ const AddCustomer = () => {
               ]}
             >
               <Input
-                onChange={(e) => {
-                  setCityValue(e.target.value);
-                }}
                 style={{
                   width: 160,
                 }}
@@ -117,9 +108,6 @@ const AddCustomer = () => {
               ]}
             >
               <Input
-                onChange={(e) => {
-                  setCountryValue(e.target.value);
-                }}
                 style={{
                   width: 160,
                 }}

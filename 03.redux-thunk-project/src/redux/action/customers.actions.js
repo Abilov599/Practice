@@ -23,12 +23,10 @@ export const getAllCustomersAction = () => {
   };
 };
 export const addCustomerAction = (obj) => {
-  return async (dispatch) => {
-    await axios.post("https://northwind.vercel.app/api/customers", obj);
-    dispatch({
-      type: "ADD_CUSTOMER",
-      payload: obj,
-    });
+  axios.post("https://northwind.vercel.app/api/customers", obj);
+  return {
+    type: "ADD_CUSTOMER",
+    //  payload: obj
   };
 };
 
