@@ -9,7 +9,6 @@ export const customersReducer = (state = initialState, action) => {
     case "GET_CUSTOMER_START":
       return {
         ...state,
-        loading: true,
       };
 
     case "GET_CUSTOMER_SUCCESS":
