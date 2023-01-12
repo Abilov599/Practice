@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Avatar, Card, Skeleton } from "antd";
 const { Meta } = Card;
 import "./index.scss";
@@ -12,6 +12,8 @@ import {
 import { Link } from "react-router-dom";
 
 const ProductsPage = () => {
+  const [value, setValue] = useState(null);
+
   const myData = useSelector((state) => state.getData);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -20,6 +22,10 @@ const ProductsPage = () => {
 
   return (
     <div className="container">
+      <input onChange={(e) => setValue(e.target.value)} />
+      <br />
+      <br />
+      <br />
       <div className="row">
         {myData.loading ? (
           <>
