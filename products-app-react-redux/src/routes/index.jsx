@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AddProductsPage from "../pages/add-products";
+import ProductDetails from "../pages/product-details";
 import ProductsPage from "../pages/products-pages";
 
 const Routing = () => {
@@ -8,7 +9,7 @@ const Routing = () => {
     <Routes>
       <Route path="/" element={<ProductsPage />} />
       <Route path="add-products" element={<AddProductsPage />} />
-      {/* <Route path="*" element={<NoPage />} /> */}
+      <Route path="/:id" element={<ProductDetails />} />
     </Routes>
   );
 };

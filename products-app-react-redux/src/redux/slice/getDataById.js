@@ -7,28 +7,28 @@ const initialState = {
   error: undefined,
 };
 
-export const fetchData = createAsyncThunk("fetchData", async () => {
-  const response = await axios(`http://localhost:3000/products/`);
+export const fetchDataById = createAsyncThunk("fetchDataById", async (id) => {
+  const response = await axios(`http://localhost:3000/products/${id}`);
   return response.data;
 });
 
-const getProductsData = createSlice({
-  name: "getData",
+const getProductDataById = createSlice({
+  name: "getProductDataById",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchData.pending, (state) => {
+    builder.addCase(fetchDataById.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(fetchData.fulfilled, (state, action) => {
+    builder.addCase(fetchDataById.fulfilled, (state, action) => {
       state.loading = false;
       state.data = action.payload;
     });
-    builder.addCase(fetchData.rejected, (state, action) => {
+    builder.addCase(fetchDataById.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload;
     });
   },
 });
 
-export default getProductsData.reducer;
+export default getProductDataById.reducer;
