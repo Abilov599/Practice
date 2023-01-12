@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Asus",
+      "price": 1200,
+      "description": "PC",
+      "imgUrl": "https://www.notebookcheck.net/fileadmin/Notebooks/HP/15-da0405ng/4zu3_HP_15_da0405ng.jpg"
+    }
+  ]
+}
