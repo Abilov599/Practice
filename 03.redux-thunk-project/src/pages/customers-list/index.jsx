@@ -19,7 +19,6 @@ const CustomerList = () => {
     message.error("Click on No");
   };
   const favorites = useSelector((state) => state.favoritesReducer);
-  // const customers = useSelector((state) => state.customersReducer.data);
   const customersData = useSelector((state) => state.customersReducer);
   const dispatch = useDispatch();
 
@@ -41,7 +40,6 @@ const CustomerList = () => {
   const handleDeleteCustomer = (id) => {
     dispatch(deletCustomerAction(id));
     dispatch(removeFromFavoritesAction(id));
-    // dispatch(getAllCustomersAction());
   };
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
     confirm();

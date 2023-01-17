@@ -1,0 +1,14 @@
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      .active {
+        color: orange;
+      }
+    }
+  }
+}
