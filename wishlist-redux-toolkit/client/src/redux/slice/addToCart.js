@@ -8,7 +8,7 @@ const addToCart = createSlice({
   reducers: {
     add: (state, action) => [...state, action.payload],
     remove: (state, action) => [
-      ...state.filter((el) => el.id !== action.payload),
+      ...state.filter((el) => el.id !== action.payload.id),
     ],
   },
 });
